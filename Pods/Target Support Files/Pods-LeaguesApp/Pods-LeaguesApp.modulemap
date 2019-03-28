@@ -1,0 +1,6 @@
+framework module Pods_LeaguesApp {
+  umbrella header "Pods-LeaguesApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

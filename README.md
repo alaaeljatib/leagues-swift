@@ -1,4 +1,4 @@
-# iOSInterview
+# LeaguesApp
 
 This is the coding challenge for the iOS interview process. It simulates the sports API but actually loads some data from a local plist.
 
