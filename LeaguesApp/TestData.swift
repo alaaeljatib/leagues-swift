@@ -3,7 +3,7 @@
 //  LeaguesApp
 //
 //  Created by Robin Senior on 2016-07-21.
-//  Copyright © 2016 thescore. All rights reserved.
+//  Copyright © 2016 Alaa Eljatib Etmaz Alsebaei. All rights reserved.
 //
 
 import Foundation

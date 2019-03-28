@@ -10,7 +10,6 @@ target 'LeaguesApp' do
 
   target 'LeaguesAppTests' do
     inherit! :search_paths
-    # Pods for testing
   end
 
 end

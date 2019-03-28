@@ -1,21 +1,45 @@
+//
+//  LeaguesAppTests.swift
+//  LeaguesAppTests
+//
+//  Created by Alaa Eljatib Etmaz Alsebaei on 2019-03-28.
+//  Copyright © 2019 Alaa Eljatib Etmaz Alsebaei. All rights reserved.
+//
 
 import XCTest
 
+@testable import Pods_LeaguesApp
+@testable import LeaguesApp
+
 class LeaguesAppTests: XCTestCase {
+    
+    var vc : LeaguesViewController?
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        vc = storyBoard.instantiateViewController(withIdentifier: "LeaguesViewControllerIdentifier") as! LeaguesViewController
+        
+        let _ = vc!.view
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
+        vc = nil
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testNumberOfTableViewCells() {
+        
+        XCTAssertEqual(vc!.leagues.count, SportsAPI.instance.leagues().count )
+    }
+    
+    func testVcTitle() {
+        
+        XCTAssertEqual(vc!.title!, "Leagues" )
     }
     
     func testPerformanceExample() {
